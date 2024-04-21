@@ -1,10 +1,11 @@
-import { Router } from 'express'
+import { Router } from 'express';
+import messages from '../models/db/messages.js';
 
-const router = Router()
+const router = Router();
 
 /* GET home page. */
 router.get('/', (req, res, _) => {
-    res.render('index', { title: 'Message board' })
-})
+    res.render('index', { messages, title: 'Message board'});
+});
 
-export default router
+export default router;
