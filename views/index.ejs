@@ -6,6 +6,35 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    
+    <main>
+      <section class="messages-board">
+        <h2>Welcome to <%= title %></h2>
+        <div class="send-msg">
+          <a href="/new">
+            Message
+          </a>
+        </div>
+        <% messages.map((message) => { %>
+          <div class="message">
+            <p>User: <%= message.user %></p>
+            <p>Message: <%= message.text %></p>
+            <p>Date: <%= 
+                        `${
+                            message
+                            .added
+                            .toDateString('en-Us', options)
+                          } 
+
+                         ${
+                            message
+                            .added
+                            .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+                          }` 
+            %></p>
+          </div>
+        <% }) %>
+      </section>
+    </main>
   </body>
 </html>
