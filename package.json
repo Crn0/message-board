@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "server": "DEBUG=<change to directory name>:* npm run dev",
-    "format": "prettier --write **/*.{js}"
+    "server": "DEBUG=message-board:* npm run dev",
+    "format": "prettier --write ./**/*.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
