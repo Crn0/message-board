@@ -87,13 +87,14 @@ a {
 
 .pos-ab {
   position: absolute;
-  top: 40%;
+  top: 50%;
 }
 
 .pos-fixed {
   position: fixed;
   top: 50%;
-  right: 5%;  
+  right: 3%;  
+  z-index: 1;
 }
 
 .margin-bot-10per {
