@@ -1,1 +1,1 @@
-# express-mongoose-template
+# message board
