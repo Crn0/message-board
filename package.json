@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "server": "DEBUG=message-board:* npm run dev",
-    "format": "prettier --write ./**/*.js"
+    "format": "prettier --write \"**/*.js\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
