@@ -2,38 +2,45 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='stylesheets/reset.css' />
+    <link rel='stylesheet' href='stylesheets/theme.css' />
+    <link rel='stylesheet' href='stylesheets/index-style.css' />
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    
-    <main>
-      <section class="messages-board">
-        <h2>Welcome to <%= title %></h2>
-        <div class="send-msg">
+    <main class="grid center-content">
+      <header class="flex flex-center border-head pad-2rem gap margin-bot-10per bg-clr-head">
+        <p>
+          <%= title %>
+        </p>
+      </header>
+      <section class="messages-board grid center-content center-items">
+        <div class="pos-fixed">
           <a href="/new">
             Message
           </a>
         </div>
-        <% messages.map((message) => { %>
-          <div class="message">
-            <p>User: <%= message.user %></p>
-            <p>Message: <%= message.text %></p>
-            <p>Date: <%= 
-                        `${
-                            message
-                            .added
-                            .toDateString('en-Us', options)
-                          } 
-
-                         ${
-                            message
-                            .added
-                            .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
-                          }` 
-            %></p>
-          </div>
-        <% }) %>
+        <h2 class="pos-ab">Welcome to <%= title %></h2>
+        <div class="message-container flex wrap border-frame pad-10rem gap">
+          <% messages.map((message) => { %>
+            <div class="message flex wrap flex-one w-250px gap h-auto border-msg pad-2rem pos-rel">
+              <p>User: <%= message.user %></p>
+              <p>Message: <%= message.text %></p>
+              <p>Date: <%=
+                          `${
+                              message
+                              .added
+                              .toDateString('en-Us', options)
+                            }
+                           ${
+                              message
+                              .added
+                              .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+                            }`
+              %></p>
+            </div>
+          <% }) %>
+        </div>
       </section>
     </main>
   </body>

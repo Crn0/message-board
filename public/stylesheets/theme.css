@@ -1,0 +1,17 @@
+:root {
+    --border-color: brown;
+    --border-msg: lightblue;
+    --header-backgrnd: brown;
+    --background-color: brown;
+    --background-color-form: aliceblue;
+    --background-color-msg: aliceblue;
+    --background-color-link: #f44336;
+    --background-color-button: crimson;
+    --background-color-hover: purple;
+    --font-color-button: white;
+    --font-link-clr: white;
+    --font-head-clr: white;
+    --font-h2-clr: brown;
+    --font-msg-clr: rebeccapurple;
+
+  }
