@@ -8,6 +8,10 @@ a {
   color: #00B7FF;
 }
 
+footer {
+  background-color: var(--background-color);
+}
+
 .grid {
   display: grid;
 }
@@ -81,6 +85,10 @@ a {
   border: 1rem solid var(--border-color);
 }
 
+.border-footer {
+  border: 0.5rem solid var(--border-color);
+}
+
 .pos-rel {
   position: relative;
 }
@@ -99,6 +107,10 @@ a {
 
 .margin-bot-10per {
   margin-bottom: 10%;
+}
+
+.margin-top-auto {
+  margin-top: auto;
 }
 
 /* nesting */
@@ -152,4 +164,13 @@ a {
 a:hover {
   background-color: var(--background-color-hover);
   color: var(--font-link-clr);
+}
+
+.user {
+  padding: 0;
+  border-radius: 0;
+  background-color: var(--background-color);
+  color: var(--font-footer-clr);
+  font-size: 2rem;
+  
 }
