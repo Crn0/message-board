@@ -20,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(join(dirname, 'public')));
+app.use(express.static('public'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -30,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use(function (err, req, res, _) {
+app.use((err, req, res, _) => {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
